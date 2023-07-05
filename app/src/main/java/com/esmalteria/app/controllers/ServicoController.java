@@ -21,12 +21,19 @@ public class ServicoController {
 	@Autowired
 	private ServicoRepository servicoRepository;
 
-	@GetMapping(value="/detalhes", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Integer  findAll() {
-		List<Servico> servico = servicoRepository.findAll();
-		return 10;
-
+	@GetMapping
+	public List<Servico> listar() {
+		return servicoRepository.findAll();
 	}
+/* 
+	# buscar por id
+
+
+	# cadastrar
+
+	# deletar */
+
+
 
 
 }
